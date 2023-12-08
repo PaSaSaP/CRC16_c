@@ -4,7 +4,11 @@
 
 #include "CRC_polynomes.h"
 
-  // set parameters to default
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+// set parameters to default
 void CRC16_reset();    // set all to constructor defaults
 void CRC16_restart();  // reset crc with same parameters
 
@@ -27,3 +31,8 @@ void CRC16_add_array(const uint8_t * array, uint16_t length);
 
 uint16_t CRC16_getCRC();  // returns CRC
 uint32_t CRC16_count();
+
+#ifdef __cplusplus
+} // extern "C"
+#endif
+
